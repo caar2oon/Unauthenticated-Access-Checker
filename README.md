@@ -27,13 +27,13 @@ While you browse a web application normally through Burp Proxy, the extension ca
    b. Click Check Selected
 4. Check the Result column:
 
-    PROTECTED	Auth is enforced
+    PROTECTED is authentication is enforced
 
-    ACCESSIBLE	Auth may be missing — investigate
+    ACCESSIBLE means without authentication the endpoint is accessible
 
-    POSSIBLY_ACCESSIBLE	Review manually
+    POSSIBLY_ACCESSIBLE	require manually confirmation of tester
 
-    INCONCLUSIVE	Send to Repeater for manual testing
+    INCONCLUSIVE means send to Repeater for manual testing it basically for 302, 301, 101 requests
 
 6. You can click the Unauth Request tab to confirm the session cookie was removed
 7. Use the Result Filter dropdown to focus on ACCESSIBLE or POSSIBLY_ACCESSIBLE
