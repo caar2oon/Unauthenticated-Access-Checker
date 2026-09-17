@@ -2,7 +2,7 @@
 ## Description
 It automatically finds every endpoint your browser hits during a pentest, replays each one without your session cookie, and tells you whether the server still responds with real data flagging endpoints that may have broken authentication.
 
-## Problem it solves
+## Problem
 During a web application pentest, you need to manually verify that every protected page or API endpoint actually enforces authentication. Without a tool like this you would have to:
 
 Manually copy each URL
@@ -10,4 +10,26 @@ Open an incognito window or delete cookies
 Replay the request
 Compare the response yourself
 
-For an application with 200+ endpoints that process takes hours and is easy to miss things. This tool automates the entire workflow inside Burp Suite.
+For an application with 200 or 300+ endpoints that process takes hours and is easy to miss things. This tool automates the entire workflow inside Burp Suite.
+
+## What it does ?
+While you browse a web application normally through Burp Proxy, the extension captures every endpoint in the background. When you trigger a check, it strips your session cookies and auth headers from the original request, replays it without authentication, and compares the two responses to determine whether the endpoint is protected.
+
+## How to use
+1. Log in to the application and browse around normally with Burp Proxy running. The extension will automatically capture endpoints from live traffic as you go.
+2. If you have already been browsing before loading the extension:
+   a. Go to the Unauth Checker tab
+   b. Click Import History
+   c. Wait for the progress bar to complete
+  All endpoints from Burp's proxy history will be loaded into the table.
+3. Check specific endpoints:
+   a. Click on one or more rows in the table
+   b. Click Check Selected
+4. Check the Result column:
+    PROTECTED	Auth is enforced
+    ACCESSIBLE	Auth may be missing — investigate
+    POSSIBLY_ACCESSIBLE	Review manually
+    INCONCLUSIVE	Send to Repeater for manual testing
+5. You can click the Unauth Request tab to confirm the session cookie was removed
+6. Use the Result Filter dropdown to focus on ACCESSIBLE or POSSIBLY_ACCESSIBLE
+7. Click Export CSV to save results
