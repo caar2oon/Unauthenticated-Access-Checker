@@ -26,10 +26,15 @@ While you browse a web application normally through Burp Proxy, the extension ca
    a. Click on one or more rows in the table
    b. Click Check Selected
 4. Check the Result column:
+
     PROTECTED	Auth is enforced
+
     ACCESSIBLE	Auth may be missing — investigate
+
     POSSIBLY_ACCESSIBLE	Review manually
+
     INCONCLUSIVE	Send to Repeater for manual testing
-5. You can click the Unauth Request tab to confirm the session cookie was removed
-6. Use the Result Filter dropdown to focus on ACCESSIBLE or POSSIBLY_ACCESSIBLE
-7. Click Export CSV to save results
+
+6. You can click the Unauth Request tab to confirm the session cookie was removed
+7. Use the Result Filter dropdown to focus on ACCESSIBLE or POSSIBLY_ACCESSIBLE
+8. Click Export CSV to save results
