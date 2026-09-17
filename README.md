@@ -38,3 +38,8 @@ While you browse a web application normally through Burp Proxy, the extension ca
 6. You can click the Unauth Request tab to confirm the session cookie was removed
 7. Use the Result Filter dropdown to focus on ACCESSIBLE or POSSIBLY_ACCESSIBLE
 8. Click Export CSV to save results
+
+## POC
+<img width="1924" height="474" alt="image" src="https://github.com/user-attachments/assets/61bffb5d-1d27-48fd-a951-6575cb4f641a" />
+<img width="1924" height="889" alt="image" src="https://github.com/user-attachments/assets/b0f01790-aafc-4c3c-8dd3-76c7d22f4826" />
+
